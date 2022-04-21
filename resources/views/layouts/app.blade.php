@@ -16,6 +16,14 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    {{--    trix content--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/0.12.0/trix.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/0.12.0/trix.js"></script>
+
+    {{--    flat picker--}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -88,10 +96,15 @@
                         <div class="col-md-4">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <a href="">Post</a>
+                                    <a href="{{ route('posts.index') }}">Post</a>
                                 </li>
                                 <li class="list-group-item">
                                     <a href="{{ route('categories.index') }}">Category</a>
+                                </li>
+                            </ul>
+                            <ul class="list-group mt-3">
+                                <li class="list-group-item">
+                                    <a href="{{ route('trashed') }}">Trash Post</a>
                                 </li>
                             </ul>
                         </div>
